@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./Navbar";
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
@@ -15,7 +16,8 @@ function App() {
       <HeroSection />
       <About />
       <Skills />
-     <Projects />
+    <Projects />
+    <ScrollToTop />
 <ContactCallToAction />
        <Contact />
        <Footer />

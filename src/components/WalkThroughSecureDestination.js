@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import confetti from "canvas-confetti";
 
 import Top from "../assets/Top.json";
-import destinationLottie from "../assets/security_lottie.json";
+import destinationLottie from "../assets/each.json";
 import partyPopper from "../assets/party_popper.json";
 
 const bubbleColors = [

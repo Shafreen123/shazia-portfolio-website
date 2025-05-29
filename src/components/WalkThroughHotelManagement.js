@@ -1,10 +1,11 @@
 // ✅ WalkThroughHotelManagement.js
 import React, { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import confetti from "canvas-confetti";
+import Confetti from "react-confetti";
+import canvasConfetti from "canvas-confetti"; // ✅ ADD THIS LINE
 
 import Top from "../assets/Top.json";
-import hotelLottie from "../assets/hotel_lottie.json";
+import hotelLottie from "../assets/each.json";
 import partyPopper from "../assets/party_popper.json";
 
 const bubbleColors = [
@@ -27,9 +28,11 @@ const steps = [
 
 const WalkThroughHotelManagement = ({ onClose, githubLink }) => {
   const [, setCurrentStep] = useState(0);
+  const [showConfetti, setShowConfetti] = useState(false); // ✅ Add state
 
   useEffect(() => {
     let isCancelled = false;
+
     const speak = (text) => {
       return new Promise((resolve) => {
         const utterance = new SpeechSynthesisUtterance(text);
@@ -48,7 +51,13 @@ const WalkThroughHotelManagement = ({ onClose, githubLink }) => {
         await speak(steps[i].text);
       }
       if (!isCancelled) {
-        confetti({ particleCount: 100, spread: 70, origin: { y: 0.9 } });
+        // ✅ Trigger confetti using canvas-confetti
+        canvasConfetti({
+          particleCount: 200,
+          spread: 100,
+          origin: { y: 0.6 },
+        });
+        setShowConfetti(true); // Optional: for react-confetti fallback
         setCurrentStep(-1);
       }
     }
@@ -63,6 +72,8 @@ const WalkThroughHotelManagement = ({ onClose, githubLink }) => {
 
   return (
     <div className="fixed inset-0 z-50 bg-black overflow-y-auto px-4 py-10 text-white">
+      {showConfetti && <Confetti width={window.innerWidth} height={window.innerHeight} />} {/* Optional fallback */}
+
       <div className="max-w-3xl mx-auto space-y-10">
         <div className="text-center">
           <Lottie animationData={Top} className="w-48 mx-auto" />

@@ -15,11 +15,11 @@ const Contact = () => {
 
       <div className="flex justify-center gap-12 text-4xl mb-6">
         <a
-          href="mailto:shaziya0205@gmail.com?subject=Portfolio Inquiry&body=Hi Shazia,"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Email"
-          className="hover:text-pink-400 transition"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=shaziya0205@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Shazia,"
+  target="_blank"
+  rel="noreferrer"
+  aria-label="Email"
+  className="hover:text-pink-400 transition"
         >
           <FaEnvelope />
         </a>
@@ -51,7 +51,7 @@ const Contact = () => {
       </div>
 
       <p className="text-sm text-gray-400">
-        Phone: <a href="tel:+91-6205826568" className="underline hover:text-pink-400">+1 (234) 567-890</a>
+        Phone: <a href="tel:+91-6205826568" className="underline hover:text-pink-400">+916205826568</a>
       </p>
     </section>
   );
