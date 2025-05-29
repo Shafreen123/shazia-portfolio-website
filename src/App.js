@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Skills from "./components/Skills";
-//import Projects from "./components/Projects";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import ContactCallToAction from './components/ContactCallToAction';
 import Footer from "./components/Footer";
@@ -15,7 +15,7 @@ function App() {
       <HeroSection />
       <About />
       <Skills />
-     
+     <Projects />
 <ContactCallToAction />
        <Contact />
        <Footer />
