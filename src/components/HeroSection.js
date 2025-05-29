@@ -21,7 +21,7 @@ const HeroSection = () => {
       >
         Hi, I'm <span className="text-pink-400">Shazia Afreen</span>
       </motion.h1>
-  <div className="font-serif text-lg italic mb-4">
+  <div className="font-formal text-lg italic mb-4">
         <TypewriterQuote
           text="Turning ideas into digital reality with code and creativity."
           speed={70}
