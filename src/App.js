@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Navbar from "./Navbar";
+import HeroSection from "./components/HeroSection";
+import About from "./components/About";
+import Skills from "./components/Skills";
+//import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import ContactCallToAction from './components/ContactCallToAction';
+import Footer from "./components/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+<Navbar />
+      <main className="pt-20">
+      <HeroSection />
+      <About />
+      <Skills />
+     
+<ContactCallToAction />
+       <Contact />
+       <Footer />
+     </main>
+      {/* Later: Add labels, skills, projects, contact, footer */}
     </div>
   );
 }
