@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import shaziaPhoto from "../assets/shazia_portfolio.jpg"; // Use ../ if this file is in components/
+import shaziaPhoto from "../assets/portfolio.jpeg"; // Use ../ if this file is in components/
 import TypewriterQuote from "./TypewriterQuote";
 const HeroSection = () => {
   return (
@@ -21,9 +21,12 @@ const HeroSection = () => {
       >
         Hi, I'm <span className="text-pink-400">Shazia Afreen</span>
       </motion.h1>
-       <TypewriterQuote text="Turning ideas into digital reality with code and creativity." 
-      speed ={70}
-      />
+  <div className="font-serif text-lg italic mb-4">
+        <TypewriterQuote
+          text="Turning ideas into digital reality with code and creativity."
+          speed={70}
+        />
+      </div>
       <p className="text-xl md:text-2xl font-medium max-w-xl">
         Final-year Computer Science student passionate about AI & web development.
       </p>
